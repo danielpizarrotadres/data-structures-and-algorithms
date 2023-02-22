@@ -20,4 +20,4 @@
 - [Sorting-and-selection](#sorting-and-selection)
 - [Text Processing](#text-processing)
 - [Graph Algorithms](#graph-algorithms)
-- [Memory Management and B-Trees] (#memory-management-and-b-trees)
+- [Memory Management and B-Trees](#memory-management-and-b-trees)
