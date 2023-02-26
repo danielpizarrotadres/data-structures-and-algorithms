@@ -68,3 +68,5 @@
             - In Section 2.3.4 we will discuss Python`s mechanism for providing iterators for collections via the special method, __iter__. With that said, if a container class provides implementations for both __len__ and __getitem__, a default iteration is provided automatically (using means we describe in Section 2.3.4). Furthermore once an interator is defined, default functionality of __contains__ is provided.
 
             - In section 1.3 we drew attention to the distinction between expression (a is b) and expression (a == b), with the former evaluating whether identifiers a and b are aliases for the same object, and the latter testing a notion of whether the two identifiers reference equivalent values. The notion of "equivalence" depends upon the context of the class, and semantics is defined with the __eq__ method. However, if no implementation is given for __eq__, the syntax (a == b) is legal with semantics of a is b, that is, an instance is equivalent ot itself and no others.
+
+    - [ ] 2.3.3 Example: Multidimensional Vector Class
