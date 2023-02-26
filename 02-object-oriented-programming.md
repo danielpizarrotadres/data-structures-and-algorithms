@@ -59,3 +59,8 @@
 
 
             - Several other top-level functions rely on calling specially named methods. For example, the standard way to determine the size of a container type is by caling the top-level len function. Note well that the calling syntax, len(foo), is not the traditional method-calling syntax with the dot operator. However, in the case of a user-defined class, the top-level len function relies on a call to a specially named __len__ method of that class. That is, the call len(foo) is evaluated through a method call, foo.__len__(). When developing data structures, we will routinely define the __len__ method to return a measure of the size of the structure.
+
+        - Implied Methods
+            - As a general rule, if a particular method is not implemented in a user-defined class, the standard syntax that relies upon that method will raise an exception. For example, evaluating the expression, a + b, for instances of a user-defined class without __add__ or __radd__ will raise an error.
+
+            - However, there are some operators that have default definitions provided by Python, in the absence of special methods, and there are some operators whose definitions are derived from others. For example, the __bool__ method, which supports the syntax if foo:, has default semantics so that every object other than None is evaluated as True, However, for container types, the __len__ method is typically defined to return the size of the container, If such a method exists, then the evaluation of bool(foo) is interpreted by default to be Ture for instances with nonzero length, and False for instances with zero length, allowing a syntax such as if waitlist: to be be used whether there are one or more entries in the waitlist.
