@@ -38,7 +38,7 @@
 
     - [ ] 2.3.1 Example: CreditCard Class
         - Some information about design here.
-![Screenshot from 2023-02-26 00-21-30](https://user-images.githubusercontent.com/118082275/221390571-2ce58416-1f89-4d60-a3a1-19fc11f1cfd5.png)
+![Screenshot from 2023-02-26 00-25-18](https://user-images.githubusercontent.com/118082275/221390707-7a3ac3f9-6249-4505-a4dd-edf8c7203d7c.png)
 
         - Some other subtopic in here
 
