@@ -35,6 +35,7 @@
         - Some information about testing and debugging here.
 
 - ### 2.3 Class Definitions
+    - Some introduction about de 2.3 point chapter Class Definitions here
 
     - [ ] 2.3.1 Example: CreditCard Class
         - Some information about design here.
@@ -42,4 +43,11 @@
 
         - Some other subtopic in here
 
-    - [ ] 2.3.2 Design
+    - [ ] 2.3.2 Operator Overloading and Python's Special methods
+        - Python's built-in classes provide natural semantics natural for many operators. For example, the syntax a + b invokes addition for numeric types, yet concatenation for sequence types. When defining a new class, we must consider whether a syntax like a + b should be defined when a or b is an instance of that class.
+        
+        - This is important: By default, the + operator is undefined for a new class. However, the author of a class may provide a definiton using a technique known as "operator overloading". This is done by implementing a specially name method. In particular the + operator is overloaded by implementing a method name __add__, which takes the right-hand operand as a parameter and which return the result of the expresion. That is, the syntax, a + b, is converted to a method call on object a of the form, a.__add__(b). Similar specially named methods exist for other operators.
+
+        - When a binary operator is applied to two instances of different types, as in 3 * 'love me', Python gives diference to the class of the left operand. In this example, it would effectively check if the int class provides a sufficient definition for how to multiply an instance by a string, via the __mul__ method. However, if that class does not implement such a behavior, Python checks the class definition for the right-han operand, it the form of a special method name __rmul__ (i.e., "right multiply"). This provides a way for a new user-defined class to support mixed operations that involve an instance of an existing class (given that the existing class would presuambly not have defined a behavior involving this new class).
+
+        - The distinction between __mul__ and __rmul__ also allows a class to define a different semantics in cases, such as matrix multiplication, in which an operation is noncommutative (that is, A * x may differ from x * A).
