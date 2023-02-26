@@ -17,5 +17,29 @@
     - [ ] 2.1.2 Object-Oriented Design Principles
         - some details here
 
-    - [ ] 2.1.2 Object-Oriented Design Principles
+    - [ ] 2.1.3 Object-Oriented Design Principles
         - some details here
+
+- ### 2.2 Software Development
+
+    - [ ] 2.2.1 Design
+        - Some information about design here.
+
+    - [ ] 2.2.2 Pseudo-Code
+        - Some information about pseudo-code here.
+
+    - [ ] 2.2.3 Coding Style and Documentation
+        - Some information about coding style and docs here.
+
+    - [ ] 2.2.4 Testing and Debugging
+        - Some information about testing and debugging here.
+
+- ### 2.3 Class Definitions
+
+    - [ ] 2.3.1 Example: CreditCard Class
+        - Some information about design here.
+![Screenshot from 2023-02-26 00-21-30](https://user-images.githubusercontent.com/118082275/221390571-2ce58416-1f89-4d60-a3a1-19fc11f1cfd5.png)
+
+        - Some other subtopic in here
+
+    - [ ] 2.3.2 Design
