@@ -34,6 +34,16 @@
     - [ ] 2.2.4 Testing and Debugging
         - Programs often tend to fail on special cases of the input. Such cases need to be carefully identified and tested.
 
+        - The dependencies among the classes and functions of a program introduce a hierarchy. Namely, a component A is above a component B in the hierarchy if A depends upon B, such as when function A calls function B, or function A relies on a parameters that is an instance of class B.
+
+        - There are two main testing strategies, top-down and bottom-up, which differ in the order in which components are tested.
+
+        - Top-down testing proceeds from the top of the bottom of the program hierarchy. It is typically used in conjunction with stubbing, a boot-strapping technique that replaces a lower-level component with a stub, a replacement for the component that simulates the functionality of the original. For example, if function A calls function B to get the first line of a file, when testing A we can replace B with a stub that returns a fixed string.
+
+        - Bottom-up testing proceeds from lower-level components to higher-level components. For example, bottom-levels functions, which do not invoke other functions, are tested first, followed by functions that call only bottom-level functions, and so on.
+
+        - Similarly a class that does not depend upon any other classes can be tested before antoher class that depends on the former. This form of testing is usually described as unit testing, as the functionality of a specific component is tested in isolation of the larger software project.
+
 - ### 2.3 Class Definitions
     - Some introduction about de 2.3 point chapter Class Definitions here
 
