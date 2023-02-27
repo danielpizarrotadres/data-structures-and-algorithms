@@ -32,7 +32,7 @@
         - Some information about coding style and docs here.
 
     - [ ] 2.2.4 Testing and Debugging
-        - Some information about testing and debugging here.
+        - Programs often tend to fail on special cases of the input. Such cases need to be carefully identified and tested.
 
 - ### 2.3 Class Definitions
     - Some introduction about de 2.3 point chapter Class Definitions here
