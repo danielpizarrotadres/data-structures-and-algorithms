@@ -35,4 +35,18 @@
 - ### 1.4 Control Flow
         
     - [ ] Condititonals
+        - No added anything yet
     - [ ] Loops
+        - Python offers two distinct looping constructs. A while loop: allows general repetition based upon the repeated testing of a Boolean condition. A foor loop: provides convenient iteration of values from a defined series (such as characters of a string, element of a list, or numbers within a given range). We discuss both form in this section.
+
+        - While Loops
+            - The syntax of a while loop in Python is as follows:
+            
+                        while condition:
+                            body
+
+            - As with if statement, condition can be an arbitrary Boolean expression, and body can be an arbitrary block of code (including nested control structures). The execution of a while loop begins with a test of the Boolean condition. If that condition evaluates to True, the body of the loop is performed. After each execution of the body, the loop condition is retested, and if it evaluates to True, another iteration of the body is performed. When conditional test evaluates to False (assuming it ever does), the loop is exited and the flow of controls continues just beyond the body of the loop.
+
+                        j = 0
+                            while j < len(data) and data[j] != 'X':
+                                j += 1
