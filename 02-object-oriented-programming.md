@@ -98,3 +98,4 @@
                 total += entry
 
     - [ ] 2.3.4 Iterators
+        - Iteration is an important concept in the design of data structures. We introduce Python's mechanism for iteration in Section 1.8. In short, an iterator for a collection provides one key behavior: It supports a special method name __next__ that returns the next element of the collection, if any, or raises a StopIteration exception to indicate that there are no further elements.
