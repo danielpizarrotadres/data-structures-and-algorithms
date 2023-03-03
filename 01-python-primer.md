@@ -50,3 +50,9 @@
                         j = 0
                             while j < len(data) and data[j] != 'X':
                                 j += 1
+
+- ### 1.5 Functions
+- ### 1.6 Simple Input and Output
+- ### 1.7 Exception Handling
+
+- ### 1.8 Iterators and Generators
