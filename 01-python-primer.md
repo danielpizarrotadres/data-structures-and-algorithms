@@ -56,3 +56,10 @@
 - ### 1.7 Exception Handling
 
 - ### 1.8 Iterators and Generators
+    - In Python, the mechanism for iteration is base upon the following conventions:
+
+        - [ ] An iterator
+            - Is an object that manages an iteration through a series of values
+            - If variable, i, identifies an iterator object, then each call to the built-in function, next(i), produces a subsequent element fron the underlying series, with a StopIteration exception raised to indicate that there are no further elements.
+        - [ ] An iterable
+            - Is an object that produces an iterator via the syntax iter(obj)
