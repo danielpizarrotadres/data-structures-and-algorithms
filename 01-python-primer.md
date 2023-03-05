@@ -63,3 +63,8 @@
             - If variable, i, identifies an iterator object, then each call to the built-in function, next(i), produces a subsequent element fron the underlying series, with a StopIteration exception raised to indicate that there are no further elements.
         - [ ] An iterable
             - Is an object that produces an iterator via the syntax iter(obj)
+
+    - By these definitons, an instance of a list is an iterable, but not itself an iterator.
+    - With data = [1, 2, 4, 8], it is not legal to call next(data).
+    - However, an iterator object can be produced with syntax, i = iter(data), and then each subsequent call to next(i) will return an element of that list.
+    - The for-loop syntax in Python simply automates this process, creating an iterator for the give iterable, and then repeatedly calling for the next element until catching the StopIteration exception.
