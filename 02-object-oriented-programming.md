@@ -112,4 +112,24 @@
 
         - Fortunately, it is rare to have to directly implement an iterator class. Our preferred approach is the use of the generator syntax (also described in Section 1.8), which  automatically produces an iterator of tielded values.
 
-        - Python also helps by providing an automatic iterator implementation for any class that defines both __len__ and __getitem__. To provide an instructive example of a low-level iterrator, the following code demostrates just such an iterator class that works on any collection that supports both __len__ and __getitem__ 
+        - Python also helps by providing an automatic iterator implementation for any class that defines both __len__ and __getitem__. To provide an instructive example of a low-level iterrator, the following code demostrates just such an iterator class that works on any collection that supports both __len__ and __getitem__
+
+                    class SequenceIterator:
+                        """ An iterator for any of Python's sequence types."""
+                    
+                        def __init__(self, sequence):
+                            """ Create an iterator for the given sequence.""""
+                            self._seq = sequence    # keep a reference to the underlying data
+                            self._k = -1            # will increment to 0 on first call to next
+                         
+                        def __next__(self):
+                            """ Return the next element, or else raise StopIteration error.""""
+                            self._ k += 1                     # advance to next index  
+                            if self._k < len(self._seq):
+                                return(self._seq[self._k])    # return the data element
+                            else:
+                                raise StopIteration()         # there are no more elements
+                                
+                        def __iter__(self):
+                            """" By convention, an iterator must return itself as an iterator.""""
+                            return self
