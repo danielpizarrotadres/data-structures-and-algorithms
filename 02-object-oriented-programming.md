@@ -109,3 +109,7 @@
 
     - [ ] 2.3.4 Iterators
         - Iteration is an important concept in the design of data structures. We introduce Python's mechanism for iteration in Section 1.8. In short, an iterator for a collection provides one key behavior: It supports a special method name __next__ that returns the next element of the collection, if any, or raises a StopIteration exception to indicate that there are no further elements.
+
+        - Fortunately, it is rare to have to directly implement an iterator class. Our preferred approach is the use of the generator syntax (also described in Section 1.8), which  automatically produces an iterator of tielded values.
+
+        - Python also helps by providing an automatic iterator implementation for any class that defines both __len__ and __getitem__. To provide an instructive example of a low-level iterrator, the following code demostrates just such an iterator class that works on any collection that supports both __len__ and __getitem__ 
