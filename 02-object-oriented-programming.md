@@ -174,3 +174,14 @@
                         def __iter__(self):
                             """" By convention, an iterator must return itself as an iterator.""""
                             return self
+
+    - [ ] 2.3.5 Example: Range Class
+        - Make a Range Class as an example for this seccion
+
+- ### 2.4 Inheritance
+    - A hierarchical design is useful in software development, as common functionality can be grouped at the most general level, thereby promoting reuse of code while differentiated behaviors can be viewed as extensions of the general case.
+    - In object-oriented programming, the mechanism for a modular and hierarchical organization is a technique known as inheritance.
+    - This allows a new class to be defined bsae upon an existing class as the starting point.
+    - In object-oriented terminology, the existing class is typically described as the base class, parent class or super-class, while the newly defined class is known as the subclass or child class
+
+
