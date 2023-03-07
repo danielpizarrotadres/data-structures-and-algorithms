@@ -48,7 +48,7 @@
     - Some introduction about de 2.3 point chapter Class Definitions here
 
     - [ ] 2.3.1 Example: CreditCard Class
-        - Some information about design here.
+        - A CreditCard Class
 
                     class CreditCard:
                         """A consumer credit card."""
@@ -102,7 +102,12 @@
                             """Process customer payment that reduces balance."""
                             return._balance -= amount
                             
-        - Some other subtopic in here
+        - A user can create an instance of the CreditCard class using syntax as:
+
+                    cc = CreditCard('John Doe', '1st Bank', '5391 0375 9387 5309', 1000)
+                    
+        - Internally, this results in a call to the specially named __init__ method that serves as the constructor of the class.
+        - Its primary responsibility is to establish the syaye of a newly created credit card object with appropiate instance variables.
 
     - [ ] 2.3.2 Operator Overloading and Python's Special methods
         - Python's built-in classes provide natural semantics natural for many operators. For example, the syntax a + b invokes addition for numeric types, yet concatenation for sequence types. When defining a new class, we must consider whether a syntax like a + b should be defined when a or b is an instance of that class.
@@ -187,5 +192,10 @@
     There are two ways in which a subclass can differentiate itself from its superclass:
     - A subclass may specialize an existing behavior by providing a new implementation that overrides an existing method.
     - A subclass may also extend its superclass by providing brand new methods.
+
+    - [ ] 2.4.1 Extending the CreditCard Class
+        - To demostrate the mechanism for inheritance in Python, we revisit the CreditCard class of Section 2.3, implementing a subclass that, for lack of a better name, we name PredatoryCreditCard. The new class will differ from the original in two ways:
+            (1) If an attempted charge is rejected because it would have exceeded the credit limit, a $5 fee will be charged.
+            (2) There will be a mechanism for assessoring a monthly interest on the outstanding balance, based upon an Annual Porcentage Rate (APR) specified as a constructor parameter.
 
 
