@@ -222,7 +222,7 @@
 
                     super().__init__(customer, bank, acnt, limit)
                     
-        - clals the __init__ method that was inherited from the CreditCard superclass. Note well that this method only accepts four parameters. We record the APR value in a new field named _apr.
+        - call the __init__ method that was inherited from the CreditCard superclass. Note well that this method only accepts four parameters. We record the APR value in a new field named _apr.
 
         - In similar fashion, our PredatoryCreditCard class provides a new implementation of the carge method that overrides the inherited method. Yet, our implementation of the new method relies on a call to the inherited method, with syntax super().charge(price)
 
