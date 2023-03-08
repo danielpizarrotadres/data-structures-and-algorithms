@@ -217,3 +217,46 @@
                     Fields:             _apr
                     Behaviors:          process_month()
                                         charge(price)
+
+        - To indicate that the new class inherits from the existing CreditCard class, our definition begins with the syntax PredatoryCreditCard(CreditCard). The body of the new class provides three member functions: __init__, charge(), and process_month(). The __init__ constructor serves a very similar role to the original CreditCard constructor. The mechanism for calling the inherited constructor relies on the syntax, super().
+
+                    super().__init__(customer, bank, acnt, limit)
+                    
+        - clals the __init__ method that was inherited from the CreditCard superclass. Note well that this method only accepts four parameters. We record the APR value in a new field named _apr.
+
+        - In similar fashion, our PredatoryCreditCard class provides a new implementation of the carge method that overrides the inherited method. Yet, our implementation of the new method relies on a call to the inherited method, with syntax super().charge(price)
+
+                    class PredatoryCreditCard(CreditCard):
+                        """An extension to CreditCard that compounds interest and fees."""
+                    
+                        def __init__(self, customer, bank, acnt, limit, apr):
+                            """Create a new predatory credit card instance
+                                
+                                The initial balance is zero
+                                
+                                customer        the name of the customer (e.g., 'John Bowman')
+                                bank            the name of the bank (e.g., 'California Savings')
+                                acnt            the acount identifier (e.g., '5931 0375 9387 5309')
+                                limit           credit limit (measured in dollars)
+                                apr             annual percentage rate (e.g., 0.0825 for 8.25% APR)
+                            """"
+                            super().__init__(customer, bank, acnt, limit)   # call super constructor
+                            self._apr = apr
+                            
+                        def charge(self, price):
+                            """Charge given price to the card, assuming sufficient credit limit.
+                            
+                            Return True if charge was processed.
+                            Return False and assess $5 fee if charge is denied.
+                            "
+                            success = super().charge(price)     # call inherited method
+                            if not success:
+                                self._balance += 5              # assess penalty
+                            return success                      # caller expects return value
+                            
+                        def process_month(self):
+                            """Assess monthly interest on outstanding balance."""
+                            if self._balance > 0:
+                                # if positive balnce, convert APR to monthly multiplicative factor
+                                month_factor = pow(1 + self._apr, 1/12)
+                                self._balance *= monthly_factor
