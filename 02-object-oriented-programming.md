@@ -199,3 +199,21 @@
             (2) There will be a mechanism for assessoring a monthly interest on the outstanding balance, based upon an Annual Porcentage Rate (APR) specified as a constructor parameter.
 
 
+                    class:              CreditCard
+                    Fields:             _customer
+                                        _bank
+                                        _account
+                                        _balance
+                                        _limit
+                    Behaviors:          get_customer()
+                                        get_bank()
+                                        get_account()
+                                        make_payment(amount)
+                                        get_balance()
+                                        get_limit()
+                                        charge(price)
+                                        
+                    class:              PredatoryCreditCard
+                    Fields:             _apr
+                    Behaviors:          process_month()
+                                        charge(price)
