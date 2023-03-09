@@ -260,3 +260,17 @@
                                 # if positive balnce, convert APR to monthly multiplicative factor
                                 month_factor = pow(1 + self._apr, 1/12)
                                 self._balance *= monthly_factor
+
+    - [ ] 2.4.2 Hierarchy of Numeric Progressions
+
+        - As a second example of the use of inheritance, we develop a hierarchy of classes for iterating numeric progressions. A numeric progression is a sequence of numbers, where each number depends on one or more of the previous numbers. For example, an arithmetic progression determines the next number by adding a fixed constant to the previous value. A geometric progression determines the next number by multiplying the previous value by a fixed constant. In general a progression requires a first value, and a way of identifying a new value based on one or more previous values. In general a progression requires a first value, and a way of identifying a new value based on one or more previous values.
+
+        - To maximize reusability of code, we develop a hierarchy of classes stemming from a general base class that we name Progression. Technically, the Progression class produces the progression of whole numbers: 0, 1, 2, ...
+
+        - However, the idea of this class is designed to serve as the base class for other progression types, providing as much common functionality as possible, and thereby minimizing the burden on the subclasses.
+
+
+                                                             Progression
+
+
+                               ArithmeticProgression       GeometricProgression       FibonacciProgression
