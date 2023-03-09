@@ -270,7 +270,7 @@
         - However, the idea of this class is designed to serve as the base class for other progression types, providing as much common functionality as possible, and thereby minimizing the burden on the subclasses.
 
 
-                                                             Progression
+                                                              Progression
 
 
                                ArithmeticProgression       GeometricProgression       FibonacciProgression
