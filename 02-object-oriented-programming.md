@@ -278,3 +278,27 @@
         - Our implementation of the basic Progression class is provided in in the code below. The constructor for this class accepts a starting value for the progression (0 by default), and initializes a data member, self._current, to that value.
 
         - The Progression class implements the conventions of a Python iterator (see Section 2.3.4), namely the special __next__ and __iter__ methods. If a user of the class creates a progression as seq = Progression(), each call to next(seq) will return a subsequent element of the progression sequence. It would also be possible to use a for-loop syntax, for value in seq:, although we note that our default progression is defined as an infine sequence.
+
+                    class Progression:
+                        """Iterator producing a generic progression.
+                        
+                        Default iterator produces the whole numbers 0, 1, 2, ...
+                        """
+                        
+                        def __init__(self, start=0):
+                            """Initialize current to the first value of the progression."""
+                            self._current = start
+                            
+                        def _advance(self):
+                            """Update self._current to a new value
+                            
+                            This should be overridden by a subclass to customize progression.
+                            
+                            By convention, if current is set to None, this designates the
+                            end of a finite progression.
+                            """
+                            
+                            self._current += 1
+                            
+                         def __next__(self):
+                            """
