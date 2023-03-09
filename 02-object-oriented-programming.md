@@ -274,3 +274,7 @@
 
 
                                ArithmeticProgression       GeometricProgression       FibonacciProgression
+
+        - Our implementation of the basic Progression class is provided in in the code below. The constructor for this class accepts a starting value for the progression (0 by default), and initializes a data member, self._current, to that value.
+
+        - The Progression class implements the conventions of a Python iterator (see Section 2.3.4), namely the special __next__ and __iter__ methods. If a user of the class creates a progression as seq = Progression(), each call to next(seq) will return a subsequent element of the progression sequence. It would also be possible to use a for-loop syntax, for value in seq:, although we note that our default progression is defined as an infine sequence.
