@@ -314,4 +314,9 @@
                          def print_progression(self, n):
                             """Print next n values of the progression."""
                             return
-        - SSas
+
+    - [ ] 2.4.2 Hierarchy of Numeric Progressions
+
+        An arithmetic Progression Class:
+
+        - Our first example of a specialized progression is an arithmetic progression. While the default 
