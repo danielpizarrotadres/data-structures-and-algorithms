@@ -38,5 +38,5 @@ class Progression:
 if __name__ == '__main__':
     progression = Progression(2)
     data = progression.print_progression(3)
-    print(' '.join(data))
+    print(data)
 
