@@ -10,7 +10,7 @@ class Progression:
 
     def _advance(self):
         """Update self._current to a new value.
-        
+
         This should be overriden by a subclass to customize progression.
 
         By convention, if current is set to None, this designates the
@@ -30,14 +30,13 @@ class Progression:
     def __iter__(self):
         """By convention, an iterator must return itself as an iterator. """
         return self
-    
+
     def print_progression(self, n):
-        values = []
-        for j in range(n):
-            values.append(next(self))
-        return values
+        """Print next n values of the progression."""
+        return ' '.join(str(next(self)) for j in range(n))
 
 if __name__ == '__main__':
-    progression = Progression(2)            # construct progression
-    val = progression.print_progression(3)
-    print(val)
+    progression = Progression(2)
+    data = progression.print_progression(3)
+    print(' '.join(data))
+
