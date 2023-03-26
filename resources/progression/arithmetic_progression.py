@@ -17,6 +17,6 @@ class ArithmeticProgression(Progression):       # inherit from Progression
         self._current += self._increment
 
 if __name__ == '__main__':
-    progression = Progression(2)
-    data = progression.print_progression(3)
-    print(data)
+    print('Default progression:')
+    default_progression = Progression().print_progression(10)
+    print(default_progression)
