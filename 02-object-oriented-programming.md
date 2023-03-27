@@ -338,3 +338,7 @@
                         def _advance(self):                 # override inherited version
                             """Update current value by adding the fixed increment."""
                             self._current += self._increment
+
+        A Geometric Progression Class
+
+        - Our second example of a specialized progression is a geometric progression, in which each value is produced by multiplying the preceding value by a fixed constant, known as the base of the geometric progression. The starting point of a geometric progression is traditionally 1, rather than 0, because multiplying 0 by any factores results in 0. As an example, a geometric progression with base 2 proceeds as 1, 2, 4, 8, 16, ...
