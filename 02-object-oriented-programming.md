@@ -319,4 +319,22 @@
 
         An arithmetic Progression Class:
 
-        - Our first example of a specialized progression is an arithmetic progression. While the default 
+        - Our first example of a specialized progression is an arithmetic progression. While the default progression increases its value by one in each step, an arithmetic progression adds a fixed constant to one term of the progression to produce the next. For example, using an increment of 4 for an arithmetic progression that starts at 0 results in the sequence 0, 4, 8, 12, ...
+
+        - The next code fragment presents our implementation of an ArithmeticProgression class, which relies on Progression as its base class. The constructor for this new class accepts both an increment value and a starting value as parameters, although default values for each are provided. By our convention, ArithmeticProgression(4) produces the sequence 0, 4, 8, 12, ..., and ArithmeticProgression(4, 1) produces the sequencd 1, 5, 9, 13, ...
+
+                    class ArithmeticProgression:            # inherit from Progression
+                        """Iterator producing a generic progression."""
+                        
+                        def __init__(self, increment=1, start=0):
+                            """Create a new arithmetic progression.
+                            
+                            increment   the fixed constant to add to each term (default 1)
+                            start       the first term of the progression (default 0)
+                            """
+                            super().__init__(start)         # initialize base class
+                            self._increment = increment
+
+                        def _advance(self):                 # override inherited version
+                            """Update current value by adding the fixed increment."""
+                            self._current += self._increment
