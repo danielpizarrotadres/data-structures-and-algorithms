@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-CMD ["python", "arithmetic_progression.py"]
+CMD ["python", "fibonacci_progression.py"]
