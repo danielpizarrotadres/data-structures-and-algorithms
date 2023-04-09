@@ -33,7 +33,16 @@ class Progression:
 
     def print_progression(self, n):
         """Print next n values of the progression."""
-        return ' '.join(str(next(self)) for j in range(n))
+        # return ' '.join(str(next(self)) for j in range(n))
+        print('---------------------------------')
+        print('n: ')
+        print(n)
+        print('----------------------------')
+        print('start iteration')
+        for j in range(n):
+            value = next(self)
+            print('value')
+            print(value)
 
 if __name__ == '__main__':
     progression = Progression(2)
