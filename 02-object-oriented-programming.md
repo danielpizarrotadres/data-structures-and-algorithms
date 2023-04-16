@@ -364,3 +364,5 @@
         - Some details here
 
     - [ ] 2.4.3 Abstract Base Classes
+
+        - When defining a group of classes as part of an inheritance hierarcy, one technique for avoiding repetition of code is to design a base class with common functionality that can be inherited by other classes that need it. As an example, the hierarchy from Section 2.4.2 includes a Progression class, which serves as a base class for three distinct subclasses: ArithmeticProgression, GeometricProgression, and FibonacciProgression. Although it is possible to create an instance of the Progression base class, there is a little value in doing so because its behavior is simply a special case of an ArithmeticProgression with increment 1.
