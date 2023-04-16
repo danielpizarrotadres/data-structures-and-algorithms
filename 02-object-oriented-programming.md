@@ -361,4 +361,4 @@
         
         A Fibonacci Progression Class
         
-        - Some information about fibo progression in here
+        - Some details here
