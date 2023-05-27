@@ -7,12 +7,14 @@ Recursion is a technique by which a function makes one or more calls to itself d
 
 - ### 4.1 Ilustrative Examples
 
-    - [ ] 4.1.1 The Factorial Function
+    - [ ] 4.1.1 The Factorial Function :construction_worker: 
         - Some information about the Factorial Function here
 
-    - [ ] 4.1.2 Drawing an English Ruler
+    - [ ] 4.1.2 Drawing an English Ruler :construction_worker:
         - In the case of computing a factorial, there is no compelling reason for preferring recursion over a direct iteration with a loop.
         - As a more complex example of the use of recursion, consider how to draw the markings of a typical English ruler:
         - For each inch, we place a tick with a numeric label.
         - We denote the length of the tick designating a whole inch as the major tick length.
         - Between the marks for whole inches, the ruler contains a series of minor ticks
+
+    - [ ] 4.1.2 Drawing an English Ruler :construction_worker:
