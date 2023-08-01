@@ -1,20 +1,3 @@
-### Chapter 4: Recursion
+### Chapter 3: Algorithm Analysis
 
-One way to describe repetition within a computer program is the use of loops, such as Python's while-loop and for-loop constructs described in Section 1.4.2. An entirely different way to achieve repetition is through a process known as recursion.
-
-Recursion is a technique by which a function makes one or more calls to itself during execution, or by which a data structure relies upon smaller instances of the very same type of structure in its representation.
-
-
-- ### 4.1 Ilustrative Examples
-
-    - [ ] 4.1.1 The Factorial Function :construction_worker: 
-        - Some information about the Factorial Function here
-
-    - [ ] 4.1.2 Drawing an English Ruler :construction_worker:
-        - In the case of computing a factorial, there is no compelling reason for preferring recursion over a direct iteration with a loop.
-        - As a more complex example of the use of recursion, consider how to draw the markings of a typical English ruler:
-        - For each inch, we place a tick with a numeric label.
-        - We denote the length of the tick designating a whole inch as the major tick length.
-        - Between the marks for whole inches, the ruler contains a series of minor ticks
-
-    - [ ] 4.1.2 Drawing an English Ruler :construction_worker:
+In this book, we are interested in the design of “good” data structures and algorithms. Simply put, a data structure is a systematic way of organizing and accessing data, and an algorithm is a step-by-step procedure for performing some task in a finite amount of time. These concepts are central to computing, but to be able to classify some data structure and algorithms as “good”, we must have precise ways of analyzing them.
